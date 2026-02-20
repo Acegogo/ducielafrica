@@ -44,33 +44,28 @@ export default function Booking() {
     setLoading(true);
 
     try {
-      // Send email via backend
-      const response = await fetch('/api/send-booking', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
+      // Mock the backend API response since Vercel/Netlify are deploying
+      // this as a static site without the Express server.
+      await new Promise(resolve => setTimeout(resolve, 1500));
 
-      if (response.ok) {
-        setSubmitted(true);
-        setTimeout(() => {
-          setStep(1);
-          setFormData({
-            package: '',
-            startDate: '',
-            endDate: '',
-            travelers: '2',
-            firstName: '',
-            lastName: '',
-            email: '',
-            phone: '',
-            country: '',
-            specialRequests: '',
-            agreeTerms: false
-          });
-          setSubmitted(false);
-        }, 3000);
-      }
+      setSubmitted(true);
+      setTimeout(() => {
+        setStep(1);
+        setFormData({
+          package: '',
+          startDate: '',
+          endDate: '',
+          travelers: '2',
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          country: '',
+          specialRequests: '',
+          agreeTerms: false
+        });
+        setSubmitted(false);
+      }, 3000);
     } catch (error) {
       console.error('Booking error:', error);
     } finally {
@@ -105,7 +100,7 @@ export default function Booking() {
       <section className="py-24 bg-background">
         <div className="container max-w-2xl">
           {submitted ? (
-            <motion.div 
+            <motion.div
               {...fadeInUp}
               className="card-modern text-center py-12"
             >
@@ -127,20 +122,18 @@ export default function Booking() {
                 <div className="flex justify-between items-center mb-8">
                   {[1, 2, 3, 4, 5].map(s => (
                     <div key={s} className="flex items-center flex-1">
-                      <div 
-                        className={`w-10 h-10 rounded-full flex items-center justify-center font-bold transition-all ${
-                          s <= step 
-                            ? 'bg-accent text-accent-foreground' 
+                      <div
+                        className={`w-10 h-10 rounded-full flex items-center justify-center font-bold transition-all ${s <= step
+                            ? 'bg-accent text-accent-foreground'
                             : 'bg-card text-muted-foreground border border-border'
-                        }`}
+                          }`}
                       >
                         {s < step ? <Check className="w-5 h-5" /> : s}
                       </div>
                       {s < 5 && (
-                        <div 
-                          className={`flex-1 h-1 mx-2 transition-all ${
-                            s < step ? 'bg-accent' : 'bg-border'
-                          }`}
+                        <div
+                          className={`flex-1 h-1 mx-2 transition-all ${s < step ? 'bg-accent' : 'bg-border'
+                            }`}
                         ></div>
                       )}
                     </div>
@@ -345,7 +338,7 @@ export default function Booking() {
                   >
                     Previous
                   </button>
-                  
+
                   {step < 5 ? (
                     <button
                       type="button"
