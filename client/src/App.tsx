@@ -10,6 +10,7 @@ import Blog from "./pages/Blog";
 import Testimonials from "./pages/Testimonials";
 import About from "./pages/About";
 import Accommodations from "./pages/Accommodations";
+import Navbar from "./components/Navbar";
 
 function Router() {
   return (
@@ -33,7 +34,10 @@ function Router() {
 function App() {
   return (
     <ThemeProvider defaultTheme="dark">
-      <Router />
+      <Navbar />
+      <div className="pt-20">
+        <Router />
+      </div>
     </ThemeProvider>
   );
 }

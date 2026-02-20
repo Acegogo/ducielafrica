@@ -18,30 +18,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-hidden">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
-        <div className="container flex items-center justify-between h-20">
-          <Link href="/">
-            <div className="flex items-center gap-2 cursor-pointer">
-              <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663341676517/wpuooLlcxktWoySl.jpeg" alt="Duciel Logo" className="h-12 w-auto" />
-            </div>
-          </Link>
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/destinations"><a className="hover:text-accent transition">Destinations</a></Link>
-            <Link href="/packages"><a className="hover:text-accent transition">Packages</a></Link>
-            <Link href="/accommodations"><a className="hover:text-accent transition">Accommodations</a></Link>
-            <Link href="/gallery"><a className="hover:text-accent transition">Gallery</a></Link>
-            <Link href="/blog"><a className="hover:text-accent transition">Blog</a></Link>
-            <Link href="/testimonials"><a className="hover:text-accent transition">Reviews</a></Link>
-            <Link href="/about"><a className="hover:text-accent transition">About</a></Link>
-            <Link href="/contact"><a className="hover:text-accent transition">Contact</a></Link>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
-        <div 
+      <section className="relative h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden">
+        <div
           className="absolute inset-0 z-0"
           style={{
             backgroundImage: 'url(https://private-us-east-1.manuscdn.com/sessionFile/tvysttF0A3l3QxUiynLwi2/sandbox/UAoqdd1wl4pBIvch7AWClj-img-1_1771503719000_na1fn_bWFhc2FpX21hcmFfbGlvbnM.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvdHZ5c3R0RjBBM2wzUXhVaXluTHdpMi9zYW5kYm94L1VBb3FkZDF3bDRwQkl2Y2g3QVdDbGotaW1nLTFfMTc3MTUwMzcxOTAwMF9uYTFmbl9iV0ZoYzJGcFgyMWhjbUZmYkdsdmJuTS5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=ZcsjAR31rsOIj25r~jCnBJTS4iK1aS318R7NaBtN4tVV40gi047LsffXi31kofjyFBnAA4Vm0QlAhmm8dmJNN0UqocOnMa5rIxvVSnGqeZLthdqgtruQJQWD-KeYO5H-Zzwtu54n~CsBOREjaZDlIxvn3HxNd7G8L5JvysvS726rVBaMyuF44dAkXIK5ArBLUsmuulIsULWCyHEGzunnFMUzqTr9qCBPVILGFL9cPWJStPxIHWWN2MfOXTy9JfQaxv-GrZHB~mROPHTnUvVm7S-th1xp5wRGEnqTHvIvxNIN5dUfJtKm7MgyJT4qHGxhwJwnaD2dfI7Wx85GhIXs3g__)',
@@ -52,19 +31,19 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
 
-        <motion.div 
+        <motion.div
           className="relative z-10 text-center max-w-4xl mx-auto px-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <motion.h1 
+          <motion.h1
             className="text-6xl md:text-8xl font-bold mb-6 text-white drop-shadow-lg"
             style={{ fontFamily: 'Montserrat' }}
           >
             Escape The Ordinary
           </motion.h1>
-          <motion.p 
+          <motion.p
             className="text-xl md:text-2xl text-gray-200 mb-8 drop-shadow-md"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -72,7 +51,7 @@ export default function Home() {
           >
             Experience the magic of East Africa with Duciel Adventures
           </motion.p>
-          <motion.div 
+          <motion.div
             className="flex gap-4 justify-center flex-wrap"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -91,7 +70,7 @@ export default function Home() {
       {/* Stats Section */}
       <section className="py-16 bg-card border-y border-border">
         <div className="container">
-          <motion.div 
+          <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
             variants={staggerContainer}
             initial="initial"
@@ -124,7 +103,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={staggerContainer}
             initial="initial"
@@ -147,18 +126,18 @@ export default function Home() {
               {
                 name: 'Zanzibar',
                 country: 'Tanzania',
-                image: 'https://private-us-east-1.manuscdn.com/sessionFile/tvysttF0A3l3QxUiynLwi2/sandbox/cYyWh09CRHrhWGxId6XOuo-img-2_1771506118000_na1fn_emFuemliYXJfYmVhY2hfZnVsbA.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvdHZ5c3R0RjBBM2wzUXhVaXluTHdpMi9zYW5kYm94L2NZeVdoMDlDUkhyaFdHeElkNlhPdW8taW1nLTJfMTc3MTUwNjExODAwMF9uYTFmbl9emFuemliYXJfYmVhY2hfZnVsbA.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvdHZ5c3R0RjBBM2wzUXhVaXluTHdpMi9zYW5kYm94L2NZeVdoMDlDUkhyaFdHeElkNlhPdW8taW1nLTJfMTc3MTUwNjExODAwMF9uYTFmbl9emFuemliYXJfYmVhY2hfZnVsbA.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvdHZ5c3R0RjBBM2wzUXhVaXluTHdpMi9zYW5kYm94L2NZeVdoMDlDUkhyaFdHeElkNlhPdW8taW1nLTJfMTc3MTUwNjExODAwMF9uYTFmbl9emFuemliYXJfYmVhY2hfZnVsbA.jpg?x-vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=c-cg9DoHEKNVcKbTGeSXqAy-zhhxyscdZb-7nyKfjzHt2Bh8OKnjLvmY1Et0UWot-o5L7JvE6E6WuM-tHIJjLaaPPMB8Frntsxnt6S1UX-mWR6WYijvAz-VXMwkLYywwDpXUuYc0ELlWx5QKbMtvIJo2XcHrzI31cCgLwIp4CanfpjBFh1OCHWU~L9Q5GYmvP2uo6bFpd1xQjb3mO3ZEV3wGZk9E-8zSWRF6orL9jWL-dfCKbKUmyD4G5gw4Kwh40pOLz1qi7C3CAIPYZ~orlzm~oT4~19VSx33h9r0HAB45MyftXQRK5Fq-wyhBQCWYLoNztfUI6PUQpFiEq3d8fw__',
+                image: 'https://private-us-east-1.manuscdn.com/sessionFile/tvysttF0A3l3QxUiynLwi2/sandbox/cYyWh09CRHrhWGxId6XOuo-img-2_1771506118000_na1fn_emFuemliYXJfYmVhY2hfZnVsbA.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvdHZ5c3R0RjBBM2wzUXhVaXluTHdpMi9zYW5kYm94L2NZeVdoMDlDUkhyaFdHeElkNlhPdW8taW1nLTJfMTc3MTUwNjExODAwMF9uYTFmbl9lbUZ1ZW1saVlYSmZZbVZoWTJoZlpuVnNiQS5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=c-cg9DoHEKNVcKbTGeSXqAy-zhhxyscdZb-7nyKfjzHt2Bh8OKnjLvmY1Et0UWot-o5L7JvE6E6WuM-tHIJjLaaPPMB8Frntsxnt6S1UX-mWR6WYijvAz-VXMwkLYywwDpXUuYc0ELlWx5QKbMtvIJo2XcHrzI31cCgLwIp4CanfpjBFh1OCHWU~L9Q5GYmvP2uo6bFpd1xQjb3mO3ZEV3wGZk9E-8zSWRF6orL9jWL-dfCKbKUmyD4G5gw4Kwh40pOLz1qi7C3CAIPYZ~orlzm~oT4~19VSx33h9r0HAB45MyftXQRK5Fq-wyhBQCWYLoNztfUI6PUQpFiEq3d8fw__',
                 description: 'Pristine beaches and tropical paradise'
               }
             ].map((dest, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 variants={fadeInUp}
                 className="card-modern overflow-hidden group"
               >
                 <div className="relative h-64 overflow-hidden rounded-lg mb-4">
-                  <img 
-                    src={dest.image} 
+                  <img
+                    src={dest.image}
                     alt={dest.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -188,7 +167,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
             variants={staggerContainer}
             initial="initial"
@@ -201,7 +180,7 @@ export default function Home() {
               { name: 'Grand Adventure', duration: '10 Days', price: '$4,500', color: 'from-pink-500' },
               { name: 'Luxury Expedition', duration: '12 Days', price: '$7,500', color: 'from-amber-500' }
             ].map((pkg, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 variants={fadeInUp}
                 className={`bg-gradient-to-br ${pkg.color} to-transparent p-8 rounded-xl border border-border hover:border-accent transition-all duration-300 group`}
@@ -225,7 +204,7 @@ export default function Home() {
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
         </div>
         <div className="container relative z-10">
-          <motion.div 
+          <motion.div
             {...fadeInUp}
             className="text-center max-w-3xl mx-auto"
           >
