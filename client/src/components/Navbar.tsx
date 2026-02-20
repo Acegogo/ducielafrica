@@ -22,14 +22,14 @@ export default function Navbar() {
       <div className="container flex items-center justify-between h-20">
         <Link href="/">
           <div className="flex items-center gap-2 cursor-pointer">
-            <img 
-              src="/duciel-logo.png" 
-              alt="Duciel Logo" 
-              className="h-16 w-auto" 
+            <img
+              src="/duciel-logo.png"
+              alt="Duciel Logo"
+              className="h-20 w-auto"
             />
           </div>
         </Link>
-        
+
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
@@ -43,8 +43,8 @@ export default function Navbar() {
 
         {/* Mobile Navigation Toggle */}
         <div className="md:hidden flex items-center">
-          <button 
-            onClick={() => setIsOpen(!isOpen)} 
+          <button
+            onClick={() => setIsOpen(!isOpen)}
             className="text-foreground hover:text-accent transition"
             aria-label="Toggle Navigation"
           >
@@ -58,7 +58,7 @@ export default function Navbar() {
         <div className="md:hidden absolute top-20 left-0 w-full bg-background border-b border-border shadow-lg py-4 px-6 flex flex-col gap-4">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href}>
-              <a 
+              <a
                 className={`block py-2 text-lg transition ${location === link.href ? "text-accent font-semibold" : "hover:text-accent"}`}
                 onClick={() => setIsOpen(false)}
               >

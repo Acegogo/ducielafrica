@@ -11,6 +11,7 @@ import Testimonials from "./pages/Testimonials";
 import About from "./pages/About";
 import Accommodations from "./pages/Accommodations";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function Router() {
   return (
@@ -34,9 +35,12 @@ function Router() {
 function App() {
   return (
     <ThemeProvider defaultTheme="dark">
-      <Navbar />
-      <div className="pt-20">
-        <Router />
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-grow pt-20">
+          <Router />
+        </main>
+        <Footer />
       </div>
     </ThemeProvider>
   );

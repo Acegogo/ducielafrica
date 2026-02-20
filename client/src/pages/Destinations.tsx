@@ -108,16 +108,16 @@ export default function Destinations() {
   ];
 
   const regions = ['all', 'Kenya', 'Tanzania', 'Rwanda', 'Uganda'];
-  const filteredDestinations = selectedRegion === 'all' 
-    ? destinations 
+  const filteredDestinations = selectedRegion === 'all'
+    ? destinations
     : destinations.filter(d => d.region === selectedRegion);
 
   return (
     <div className="min-h-screen bg-background text-foreground pt-20">
       {/* Hero Header with Background Image */}
-      <section 
+      <section
         className="py-32 bg-cover bg-center relative"
-        style={{ backgroundImage: 'url(https://private-us-east-1.manuscdn.com/sessionFile/tvysttF0A3l3QxUiynLwi2/sandbox/cYyWh09CRHrhWGxId6XOuo-img-1_1771506118000_na1fn_bmdvcm9uZ29yb19jcmF0ZXJfZnVsbA.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80)' }}
+        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&q=80&w=1920")' }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="container relative z-10">
@@ -140,11 +140,10 @@ export default function Destinations() {
               <button
                 key={region}
                 onClick={() => setSelectedRegion(region)}
-                className={`px-6 py-2 rounded-lg font-semibold transition-all ${
-                  selectedRegion === region
+                className={`px-6 py-2 rounded-lg font-semibold transition-all ${selectedRegion === region
                     ? 'bg-accent text-accent-foreground'
                     : 'bg-card text-foreground hover:bg-card/80 border border-border'
-                }`}
+                  }`}
               >
                 {region.charAt(0).toUpperCase() + region.slice(1)}
               </button>
@@ -156,7 +155,7 @@ export default function Destinations() {
       {/* Destinations Grid */}
       <section className="py-24 bg-background">
         <div className="container">
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -169,8 +168,8 @@ export default function Destinations() {
                 className="bg-card rounded-lg overflow-hidden border border-border hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 <div className="relative h-64 overflow-hidden">
-                  <img 
-                    src={dest.image} 
+                  <img
+                    src={dest.image}
                     alt={dest.name}
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                   />
@@ -180,7 +179,7 @@ export default function Destinations() {
                     {dest.name}
                   </h3>
                   <p className="text-muted-foreground mb-4">{dest.description}</p>
-                  
+
                   <div className="space-y-3 text-sm">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4 text-accent" />

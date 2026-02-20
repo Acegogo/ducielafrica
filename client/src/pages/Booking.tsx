@@ -44,34 +44,54 @@ export default function Booking() {
     setLoading(true);
 
     try {
-      // Mock the backend API response since Vercel/Netlify are deploying
-      // this as a static site without the Express server.
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      const payload = {
+        access_key: "1a817e9e-024d-473b-a2e8-a6ce29090b0a",
+        subject: `New Safari Booking: ${formData.firstName} ${formData.lastName}`,
+        ...formData
+      };
 
-      setSubmitted(true);
-      setTimeout(() => {
-        setStep(1);
-        setFormData({
-          package: '',
-          startDate: '',
-          endDate: '',
-          travelers: '2',
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          country: '',
-          specialRequests: '',
-          agreeTerms: false
-        });
-        setSubmitted(false);
-      }, 3000);
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setStep(1);
+          setFormData({
+            package: '',
+            startDate: '',
+            endDate: '',
+            travelers: '2',
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            country: '',
+            specialRequests: '',
+            agreeTerms: false
+          });
+          setSubmitted(false);
+        }, 5000);
+      } else {
+        console.error('Submission failed:', result);
+      }
     } catch (error) {
       console.error('Booking error:', error);
     } finally {
       setLoading(false);
     }
   };
+
+  // Get today's date in YYYY-MM-DD format for the min date constraint
+  const today = new Date().toISOString().split('T')[0];
 
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -124,8 +144,8 @@ export default function Booking() {
                     <div key={s} className="flex items-center flex-1">
                       <div
                         className={`w-10 h-10 rounded-full flex items-center justify-center font-bold transition-all ${s <= step
-                            ? 'bg-accent text-accent-foreground'
-                            : 'bg-card text-muted-foreground border border-border'
+                          ? 'bg-accent text-accent-foreground'
+                          : 'bg-card text-muted-foreground border border-border'
                           }`}
                       >
                         {s < step ? <Check className="w-5 h-5" /> : s}
@@ -182,8 +202,9 @@ export default function Booking() {
                           type="date"
                           name="startDate"
                           value={formData.startDate}
+                          min={today}
                           onChange={handleChange}
-                          className="w-full px-4 py-2 bg-card border border-border rounded-lg text-foreground focus:border-accent outline-none"
+                          className="w-full px-4 py-2 bg-card border border-border rounded-lg text-foreground focus:border-accent outline-none appearance-none"
                           required
                         />
                       </div>
@@ -193,8 +214,9 @@ export default function Booking() {
                           type="date"
                           name="endDate"
                           value={formData.endDate}
+                          min={formData.startDate || today}
                           onChange={handleChange}
-                          className="w-full px-4 py-2 bg-card border border-border rounded-lg text-foreground focus:border-accent outline-none"
+                          className="w-full px-4 py-2 bg-card border border-border rounded-lg text-foreground focus:border-accent outline-none appearance-none"
                           required
                         />
                       </div>

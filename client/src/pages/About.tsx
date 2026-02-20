@@ -1,5 +1,26 @@
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useTransform, animate, useInView } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 import { Award, Users, Globe, Heart } from 'lucide-react';
+
+function AnimatedNumber({ value, suffix = '' }: { value: number, suffix?: string }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, Math.round);
+
+  useEffect(() => {
+    if (isInView) {
+      const animation = animate(count, value, { duration: 2.5, ease: "easeOut" });
+      return animation.stop;
+    }
+  }, [isInView, value, count]);
+
+  return (
+    <span ref={ref} className="inline-flex">
+      <motion.span>{rounded}</motion.span>{suffix}
+    </span>
+  );
+}
 
 export default function About() {
   const fadeInUp = {
@@ -97,32 +118,39 @@ export default function About() {
             </motion.div>
             <motion.div
               {...fadeInUp}
-              className="card-modern p-8 bg-gradient-to-br from-accent/10 to-secondary/10"
+              className="card-modern relative overflow-hidden p-8 lg:p-12 min-h-[400px] flex items-center justify-center border-none shadow-2xl"
+              style={{
+                backgroundImage: 'url("https://images.unsplash.com/photo-1547471080-7fc2caa6f17f?auto=format&fit=crop&q=80&w=1200")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
             >
-              <div className="space-y-6">
-                <div>
-                  <div className="text-5xl font-bold text-accent mb-2" style={{ fontFamily: 'Montserrat' }}>
-                    17+
+              <div className="absolute inset-0 bg-black/70 backdrop-blur-[2px]"></div>
+
+              <div className="relative z-10 grid grid-cols-2 gap-8 md:gap-12 w-full text-center">
+                <div className="flex flex-col items-center">
+                  <div className="text-4xl md:text-5xl font-bold text-accent mb-2" style={{ fontFamily: 'Montserrat' }}>
+                    <AnimatedNumber value={17} suffix="+" />
                   </div>
-                  <div className="text-lg font-semibold text-accent">Years of Excellence</div>
+                  <div className="text-sm md:text-base font-semibold text-gray-200 uppercase tracking-wider">Years of Excellence</div>
                 </div>
-                <div>
-                  <div className="text-5xl font-bold text-accent mb-2" style={{ fontFamily: 'Montserrat' }}>
-                    5000+
+                <div className="flex flex-col items-center">
+                  <div className="text-4xl md:text-5xl font-bold text-accent mb-2" style={{ fontFamily: 'Montserrat' }}>
+                    <AnimatedNumber value={5000} suffix="+" />
                   </div>
-                  <div className="text-lg font-semibold text-accent">Happy Travelers</div>
+                  <div className="text-sm md:text-base font-semibold text-gray-200 uppercase tracking-wider">Happy Travelers</div>
                 </div>
-                <div>
-                  <div className="text-5xl font-bold text-accent mb-2" style={{ fontFamily: 'Montserrat' }}>
-                    50+
+                <div className="flex flex-col items-center">
+                  <div className="text-4xl md:text-5xl font-bold text-accent mb-2" style={{ fontFamily: 'Montserrat' }}>
+                    <AnimatedNumber value={50} suffix="+" />
                   </div>
-                  <div className="text-lg font-semibold text-accent">Destinations Covered</div>
+                  <div className="text-sm md:text-base font-semibold text-gray-200 uppercase tracking-wider">Destinations</div>
                 </div>
-                <div>
-                  <div className="text-5xl font-bold text-accent mb-2" style={{ fontFamily: 'Montserrat' }}>
-                    100%
+                <div className="flex flex-col items-center">
+                  <div className="text-4xl md:text-5xl font-bold text-accent mb-2" style={{ fontFamily: 'Montserrat' }}>
+                    <AnimatedNumber value={100} suffix="%" />
                   </div>
-                  <div className="text-lg font-semibold text-accent">Satisfaction Rate</div>
+                  <div className="text-sm md:text-base font-semibold text-gray-200 uppercase tracking-wider">Satisfaction</div>
                 </div>
               </div>
             </motion.div>

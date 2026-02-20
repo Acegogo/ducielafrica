@@ -43,19 +43,9 @@ export default function Gallery() {
       category: 'Landscape'
     },
     {
-      src: 'https://private-us-east-1.manuscdn.com/sessionFile/tvysttF0A3l3QxUiynLwi2/sandbox/cYyWh09CRHrhWGxId6XOuo-img-1_1771506118000_na1fn_bmdvcm9uZ29yb19jcmF0ZXJfZnVsbA.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvdHZ5c3R0RjBBM2wzUXhVaXluTHdpMi9zYW5kYm94L2NZeVdoMDlDUkhyaFdHeElkNlhPdW8taW1nLTFfMTc3MTUwNjExODAwMF9uYTFmbl9ibWR2Y201dVoyOXliMTlqY21GMFpYSmZablZzYkEuanBnP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=dWZzxDoMTVmqeYivQ4dt59On30mGbhnJkxgMOzQU-rlR~ol5oP2aDDusnZbpC7h0ZSevfzagEQU0XHntuGomPa~e-5Y-aXMLvBGQQ1TXLvHktR7DRBR~I~gcmNCtVQdhm79cNbnUqQzVDsO9Y1U1bJdwbrYm6ihOmG2H1O1En1kWGyPk2DpgC2oNbSp~lbP5DVTjn8ta6eup1VnHn6XRUipB2Ox-EYln1ayqxIzu4nenCyD-vCtIheX865GNfuOSlo7RNvrcf2frTPyR7pJkviuo-0wBj8c2rw1acf7g-8szh5VXk4eWPR37LtfvR2Ytn0okp~WvKKNPrSaB5yGswg__',
-      title: 'Ngorongoro Crater',
-      category: 'Landscape'
-    },
-    {
       src: 'https://private-us-east-1.manuscdn.com/sessionFile/tvysttF0A3l3QxUiynLwi2/sandbox/cYyWh09CRHrhWGxId6XOuo-img-2_1771506118000_na1fn_emFuemliYXJfYmVhY2hfZnVsbA.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvdHZ5c3R0RjBBM2wzUXhVaXluTHdpMi9zYW5kYm94L2NZeVdoMDlDUkhyaFdHeElkNlhPdW8taW1nLTJfMTc3MTUwNjExODAwMF9uYTFmbl9lbUZ1ZW1saVlYSmZZbVZoWTJoZlpuVnNiQS5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=c-cg9DoHEKNVcKbTGeSXqAy-zhhxyscdZb-7nyKfjzHt2Bh8OKnjLvmY1Et0UWot-o5L7JvE6E6WuM-tHIJjLaaPPMB8Frntsxnt6S1UX-mWR6WYijvAz-VXMwkLYywwDpXUuYc0ELlWx5QKbMtvIJo2XcHrzI31cCgLwIp4CanfpjBFh1OCHWU~L9Q5GYmvP2uo6bFpd1xQjb3mO3ZEV3wGZk9E-8zSWRF6orL9jWL-dfCKbKUmyD4G5gw4Kwh40pOLz1qi7C3CAIPYZ~orlzm~oT4~19VSx33h9r0HAB45MyftXQRK5Fq-wyhBQCWYLoNztfUI6PUQpFiEq3d8fw__',
       title: 'Zanzibar Beach',
       category: 'Beach'
-    },
-    {
-      src: 'https://private-us-east-1.manuscdn.com/sessionFile/tvysttF0A3l3QxUiynLwi2/sandbox/cYyWh09CRHrhWGxId6XOuo-img-3_1771506134000_na1fn_a2lsaW1hbmphcm9fZnVsbA.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvdHZ5c3R0RjBBM2wzUXhVaXluTHdpMi9zYW5kYm94L2NZeVdoMDlDUkhyaFdHeElkNlhPdW8taW1nLTNfMTc3MTUwNjEzNDAwMF9uYTFmbl9hMmxzYVcxaGJtcGhjbTlmWm5Wc2JBLmpwZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=nlodN5hqybcO3h3Z2qumRVUTmhmjUYIMtUj5XAEkWi4ZrxY4GuqfaFST~J-oSc0llpRFy6MFN217ni23QFzwOuMSzpj6b9PtlYKRCtNMOzSD1RgIdmfGzwg-evcbNztFoB3G8cvnG9SF3f4U0cYq5maq9x3LEah79qXs-zc8kf6oufcy-aaiDvgrN1FrNeA4SkobOwRz-24Q36Tjar4RrYfJhlsQRCc5vCp~S2GUyfGm3MwVA2ouegqnhNKpxNV-sTHJT4z3Omh3LO0UOJk1rErwJzbDysHykHEqygDi~oQFttPN-QHzTCvG7zcUHDglOzD-ZF0Trq4szXxbIW7G0A__',
-      title: 'Mount Kilimanjaro',
-      category: 'Landscape'
     },
     {
       src: 'https://private-us-east-1.manuscdn.com/sessionFile/tvysttF0A3l3QxUiynLwi2/sandbox/cYyWh09CRHrhWGxId6XOuo-img-4_1771506121000_na1fn_bGFrZV9raXZ1X3N1bnNldA.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvdHZ5c3R0RjBBM2wzUXhVaXluTHdpMi9zYW5kYm94L2NZeVdoMDlDUkhyaFdHeElkNlhPdW8taW1nLTRfMTc3MTUwNjEyMTAwMF9uYTFmbl9iR0ZyWlY5cmFYWjFYM04xYm5ObGRBLmpwZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=uxAdUKMAAwE3CVDXUQO7e4baXHFdrC3r9TRqZKnopGV7phv5Wkijfu9BE0DhpXXY~ndLcy~5WnvWI0WC16iruzfUes3LRgSsmaYtIvPLS-zZtfpYqrm3Hnpotstol7UXaaid9ihVYvz7yDD0L-g9Z8CkK0mT4Qx065oYgDTdUWyqcT6-DyVpe-ztOYZ4WByE4Oh1p0834VZUy36wru1GauiIyJSmf9H0nLr3ckOJ76oa2ZwYNBNOAhM0NkGnawpUl9XMIUGI-P9cVNw7g3poIt7hfXPxuyB87kqJgElQAAI9tHXEvMdMI7lg~EpoAjgA6jSIo69tGLMAJsuGX31NLQ__',
@@ -96,14 +86,14 @@ export default function Gallery() {
       {/* Gallery Grid */}
       <section className="py-24 bg-background">
         <div className="container">
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
             {images.map((image, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -112,8 +102,8 @@ export default function Gallery() {
                 onClick={() => setSelectedImage(idx)}
                 className="relative h-64 rounded-lg overflow-hidden cursor-pointer group"
               >
-                <img 
-                  src={image.src} 
+                <img
+                  src={image.src}
                   alt={image.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -131,25 +121,25 @@ export default function Gallery() {
 
       {/* Lightbox */}
       {selectedImage !== null && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={() => setSelectedImage(null)}
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
         >
-          <motion.div 
+          <motion.div
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             onClick={(e) => e.stopPropagation()}
             className="relative max-w-4xl w-full"
           >
-            <img 
-              src={images[selectedImage].src} 
+            <img
+              src={images[selectedImage].src}
               alt={images[selectedImage].title}
               className="w-full h-auto rounded-lg"
             />
-            
+
             <button
               onClick={() => setSelectedImage(null)}
               className="absolute top-4 right-4 bg-accent text-accent-foreground p-2 rounded-full hover:bg-accent/80 transition"
