@@ -9,9 +9,9 @@ export default function Navbar() {
   const navLinks = [
     { href: "/destinations", label: "Destinations" },
     { href: "/packages", label: "Packages" },
+    { href: "/ticketing", label: "Ticketing" },
     { href: "/accommodations", label: "Accommodations" },
     { href: "/gallery", label: "Gallery" },
-    { href: "/blog", label: "Blog" },
     { href: "/testimonials", label: "Reviews" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },

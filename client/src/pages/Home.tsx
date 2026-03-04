@@ -197,6 +197,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Flight Ticketing Section */}
+      <section className="py-24 bg-background relative overflow-hidden">
+        <div className="container relative z-10">
+          <motion.div
+            className="card-modern overflow-hidden bg-card/60 border border-border flex flex-col md:flex-row shadow-2xl"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="md:w-1/2 p-12 flex flex-col justify-center">
+              <h2 className="text-4xl font-bold text-accent mb-6">Need a Flight?</h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                We now offer comprehensive flight booking services to get you to your adventure faster and more comfortably. Book your domestic and international flights with us today.
+              </p>
+              <div>
+                <Link href="/ticketing">
+                  <a className="btn-primary inline-flex items-center gap-2">Book a Flight <ChevronRight className="w-5 h-5" /></a>
+                </Link>
+              </div>
+            </div>
+            <div className="md:w-1/2 h-64 md:h-auto overflow-hidden relative">
+              <img
+                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop"
+                alt="Airplane flying in the sky"
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-card/80 to-transparent md:bg-gradient-to-l"></div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24 bg-background relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">

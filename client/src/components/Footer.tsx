@@ -17,9 +17,11 @@ export default function Footer() {
                     </div>
                     <div>
                         <h4 className="font-bold mb-4">Quick Links</h4>
-                        <ul className="space-y-2 text-sm text-muted-foreground">
+                        <ul className="space-y-3 mt-6">
+                            <li><Link href="/about"><a className="hover:text-accent transition">About Us</a></Link></li>
                             <li><Link href="/destinations"><a className="hover:text-accent transition">Destinations</a></Link></li>
                             <li><Link href="/packages"><a className="hover:text-accent transition">Packages</a></Link></li>
+                            <li><Link href="/ticketing"><a className="hover:text-accent transition">Ticketing</a></Link></li>
                             <li><Link href="/gallery"><a className="hover:text-accent transition">Gallery</a></Link></li>
                         </ul>
                     </div>

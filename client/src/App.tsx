@@ -3,6 +3,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Destinations from "./pages/Destinations";
 import Packages from "./pages/Packages";
+import Ticketing from "./pages/Ticketing";
 import Booking from "./pages/Booking";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
@@ -19,6 +20,7 @@ function Router() {
       <Route path={"/ "} component={Home} />
       <Route path={"/destinations"} component={Destinations} />
       <Route path={"/packages"} component={Packages} />
+      <Route path={"/ticketing"} component={Ticketing} />
       <Route path={"/booking"} component={Booking} />
       <Route path={"/gallery"} component={Gallery} />
       <Route path={"/blog"} component={Blog} />

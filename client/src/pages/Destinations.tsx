@@ -39,8 +39,8 @@ export default function Destinations() {
       image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663341676517/hrNdXbcSAdtSBaeA.jpg',
       description: 'Volcanic crater with diverse ecosystem',
       bestSeason: 'Jun - Oct',
-      wildlife: 'Rhinos, Flamingos, Zebras, Wildebeest',
-      activities: 'Crater Tour, Photography, Nature Walk'
+      wildlife: 'Lions, Leopards, Elephants, Buffalo, Rhinos',
+      activities: 'Game Drives, Walking Safaris, Night Drives'
     },
     {
       name: 'Mount Kilimanjaro',
@@ -77,15 +77,6 @@ export default function Destinations() {
       bestSeason: 'Jul - Oct',
       wildlife: 'Elephants, Lions, Giraffes, Zebras',
       activities: 'Safari, Photography, Guided Tours'
-    },
-    {
-      name: 'Bwindi Gorillas',
-      region: 'Uganda',
-      image: 'https://private-us-east-1.manuscdn.com/sessionFile/tvysttF0A3l3QxUiynLwi2/sandbox/uQAaY3Z3uBvkBDJsnFrDk3-img-2_1771503770000_na1fn_YndpbmRpX2dvcmlsbGFz.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvdHZ5c3R0RjBBM2wzUXhVaXluTHdpMi9zYW5kYm94L3VRQWFZM1ozdUJ2a0JESnNuRnJEazMtaW1nLTJfMTc3MTUwMzc3MDAwMF9uYTFmbl9ZbmRwYm1ScFgyZHZjbWxzYkdGei5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=vaOBI4j-wMsv6eCNOygSbPe4nppnwVXVfDRpKvkoo7ama4n7hy~6frE0Vme2KO4KuQ6NseLLpvvaGRhGEkm2quyZjBj81MUStpLJd6NsNw85YMsxtobu-v6y7eGoBwlbCMyByBZBKxGGPkFu849Jp41YM~3kJMioKH6hbRNXsSkbeb6sFZWVswMMfWzQdFtAs2GlC-h0KQ3UWCIBmpAk7KGNcFROK-aaacLH~VhjfSU4SZxE6kIbHmtMVlxoyc3P3v8e1Buqm3XFMf54ZbOjzM07~tbMbpHr5lEzlJKiawXJ9kywFovrByc9HZpF9xdq-XxkrGMRnmdkbjObXvp6sA__',
-      description: 'Mountain gorilla trekking experience',
-      bestSeason: 'Jun - Aug, Dec - Feb',
-      wildlife: 'Mountain Gorillas, Forest Elephants, Buffaloes',
-      activities: 'Gorilla Trekking, Hiking, Nature Walks'
     },
     {
       name: 'Tarangire',
@@ -141,8 +132,8 @@ export default function Destinations() {
                 key={region}
                 onClick={() => setSelectedRegion(region)}
                 className={`px-6 py-2 rounded-lg font-semibold transition-all ${selectedRegion === region
-                    ? 'bg-accent text-accent-foreground'
-                    : 'bg-card text-foreground hover:bg-card/80 border border-border'
+                  ? 'bg-accent text-accent-foreground'
+                  : 'bg-card text-foreground hover:bg-card/80 border border-border'
                   }`}
               >
                 {region.charAt(0).toUpperCase() + region.slice(1)}

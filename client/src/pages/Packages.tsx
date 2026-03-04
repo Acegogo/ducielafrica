@@ -67,23 +67,21 @@ export default function Packages() {
       color: 'from-pink-500'
     },
     {
-      name: 'Gorilla & Safari',
-      duration: '9 Days / 8 Nights',
-      price: '$4,800',
-      pricePerDay: '$533/day',
-      destinations: 'Uganda, Rwanda & Tanzania',
-      description: 'Mountain gorilla trekking plus safari adventure',
+      name: 'Custom Safari Package',
+      duration: 'Flexible',
+      price: 'Contact Us',
+      pricePerDay: 'Varies',
+      destinations: 'Flexible',
+      description: 'A completely tailored experience designed exclusively for you',
       highlights: [
-        'Mountain gorilla trekking',
-        'Bwindi Impenetrable Forest',
-        'Queen Elizabeth National Park',
-        'Serengeti safari',
-        'Expert guides',
-        'Premium accommodations',
-        'All meals & activities'
+        'Choose your destinations',
+        'Flexible duration',
+        'Select preferred accommodation tier',
+        'Mix and match activities',
+        'Dedicated travel consultant'
       ],
-      popular: false,
-      color: 'from-green-500'
+      popular: true,
+      color: 'from-amber-500'
     },
     {
       name: 'Grand Safari Adventure',
@@ -131,16 +129,13 @@ export default function Packages() {
       price: '$7,500',
       pricePerDay: '$625/day',
       destinations: 'All East Africa',
-      description: 'Ultimate luxury safari experience',
+      description: 'The ultimate bespoke luxury safari experience',
       highlights: [
-        'Private guide & vehicle',
-        'All major destinations',
-        'Ultra-luxury lodges',
-        'Helicopter transfers',
-        'Gourmet dining',
-        'Spa treatments',
-        'Private game drives',
-        'Personalized itinerary'
+        'Exclusive luxury lodges',
+        'Private aircraft transfers',
+        'Private guide and vehicle',
+        'Hot air balloon safari',
+        'Exclusive wilderness access'
       ],
       popular: false,
       color: 'from-indigo-500'
@@ -170,7 +165,7 @@ export default function Packages() {
   return (
     <div className="min-h-screen bg-background text-foreground pt-20">
       {/* Hero Header with Background Image */}
-      <section 
+      <section
         className="py-32 bg-cover bg-center relative"
         style={{ backgroundImage: 'url(https://files.manuscdn.com/user_upload_by_module/session_file/310519663341676517/yeLWJxKMJBwaAUJh.jpg)' }}
       >
@@ -190,14 +185,14 @@ export default function Packages() {
       {/* Packages Grid */}
       <section className="py-24 bg-background">
         <div className="container">
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
             {packages.map((pkg, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 variants={fadeInUp}
                 initial="initial"
@@ -210,7 +205,7 @@ export default function Packages() {
                     Popular
                   </div>
                 )}
-                
+
                 <div className={`bg-gradient-to-br ${pkg.color} to-transparent p-4 rounded-lg mb-4 h-24 flex items-end`}>
                   <div>
                     <h3 className="text-2xl font-bold text-white">{pkg.name}</h3>

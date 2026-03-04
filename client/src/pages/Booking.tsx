@@ -24,11 +24,11 @@ export default function Booking() {
     'Safari Essentials - $1,800',
     'Classic East Africa - $2,800',
     'Beach & Bush Escape - $3,200',
-    'Gorilla & Safari - $4,800',
     'Grand Safari Adventure - $4,500',
     'Photography Safari - $5,500',
     'Luxury Expedition - $7,500',
-    'Honeymoon Special - $6,500'
+    'Honeymoon Special - $6,500',
+    'Custom Safari Package - Contact Us'
   ];
 
   const handleChange = (e: any) => {
