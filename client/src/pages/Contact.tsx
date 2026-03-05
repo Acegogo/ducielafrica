@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Instagram, Twitter, MessageCircle } from 'lucide-react';
 
 export default function Contact() {
   const fadeInUp = {
@@ -29,8 +29,8 @@ export default function Contact() {
       {/* Contact Info */}
       <section className="py-24 bg-background">
         <div className="container">
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -45,8 +45,14 @@ export default function Contact() {
               {
                 icon: Phone,
                 title: 'Phone',
-                content: '+254 (0) 123 456 789',
-                link: 'tel:+254123456789'
+                content: '0782 561284',
+                link: 'tel:+254782561284'
+              },
+              {
+                icon: MessageCircle,
+                title: 'WhatsApp',
+                content: '0782 561284',
+                link: 'https://wa.me/254782561284'
               },
               {
                 icon: MapPin,
@@ -125,7 +131,7 @@ export default function Contact() {
                   a: 'Yes! We offer fully customizable itineraries. Contact our team to discuss your preferences, interests, and budget, and we\'ll create the perfect safari experience for you.'
                 }
               ].map((faq, idx) => (
-                <motion.div 
+                <motion.div
                   key={idx}
                   variants={fadeInUp}
                   initial="initial"
@@ -176,11 +182,15 @@ export default function Contact() {
               Contact us today or explore our packages to begin planning your dream safari
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
-              <a href="mailto:info@ducieladventures.com" className="btn-primary inline-block">
+              <a href="mailto:info@ducieladventures.com" className="btn-primary inline-flex items-center justify-center">
                 Send Email
               </a>
-              <a href="tel:+254123456789" className="btn-outline inline-block">
+              <a href="tel:+254782561284" className="btn-outline inline-flex items-center justify-center">
                 Call Us
+              </a>
+              <a href="https://wa.me/254782561284" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-bold transition bg-[#25D366] text-white hover:bg-[#128C7E]">
+                <MessageCircle className="w-5 h-5" />
+                WhatsApp Us
               </a>
             </div>
           </motion.div>

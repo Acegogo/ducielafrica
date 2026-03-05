@@ -27,13 +27,15 @@ export default function Footer() {
                     </div>
                     <div>
                         <h4 className="font-bold mb-4">Contact</h4>
-                        <p className="text-muted-foreground text-sm">info@ducieladventures.com</p>
+                        <p className="text-muted-foreground text-sm mb-2">info@ducieladventures.com</p>
+                        <p className="text-muted-foreground text-sm">0782 561284</p>
                     </div>
                     <div>
                         <h4 className="font-bold mb-4">Follow Us</h4>
-                        <div className="flex gap-4">
+                        <div className="flex gap-4 flex-wrap">
                             <a href="#" className="text-muted-foreground hover:text-accent transition">Facebook</a>
                             <a href="#" className="text-muted-foreground hover:text-accent transition">Instagram</a>
+                            <a href="https://x.com/Duciel_Africa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition">Twitter (X)</a>
                         </div>
                     </div>
                 </div>

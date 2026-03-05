@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Accommodations from "./pages/Accommodations";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import WhatsAppWidget from "./components/WhatsAppWidget";
 
 function Router() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Router />
         </main>
         <Footer />
+        <WhatsAppWidget />
       </div>
     </ThemeProvider>
   );
